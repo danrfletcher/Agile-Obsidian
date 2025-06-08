@@ -1,3 +1,4 @@
 [submodule ".obsidian"]
 	path = .obsidian
 	url = https://github.com/danrfletcher/.obsidian
+	branch = main
