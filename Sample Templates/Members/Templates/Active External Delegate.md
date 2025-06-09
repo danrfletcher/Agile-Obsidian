@@ -1,0 +1,1 @@
+ → <mark class="active-[externel-delegate-name]" style="background: #FA9684;"><strong><a href="">👤 @external-delegate-name</a></strong></mark>
