@@ -3,8 +3,9 @@
 ### Setup on iOS
 1. Create empty local vault in Obsidian called [Your Team Name].
 2. Close Obsidian
-3. Download [iSH](https://apps.apple.com/us/app/ish-shell/id1436902243).
-4. Open iSH & run: 
+3. Fork repo https://github.com/danrfletcher/Agile-Obsidian
+4. Download [iSH](https://apps.apple.com/us/app/ish-shell/id1436902243).
+5. Open iSH & run: 
 ```
 apk update \
 && apk add git \
@@ -13,7 +14,7 @@ apk update \
 && mount -t ios . Nueral \
 && cd Nueral \
 && rm -rf .obsidian \
-&& git clone https://github.com/danrfletcher/Agile-Obsidian . \
+&& git clone https://github.com/you/your-forked-repo . \
 && git submodule update --init --recursive \
 ```
 4. Reopen Obsidian, select trust this author & enable plugins.
