@@ -1,11 +1,12 @@
 ## Setup
 
 ### Setup on iOS
-1. Create empty local vault in Obsidian called [Your Team Name].
-2. Close Obsidian
-3. Fork repo https://github.com/danrfletcher/Agile-Obsidian
-4. Download [iSH](https://apps.apple.com/us/app/ish-shell/id1436902243).
-5. Open iSH & run: 
+1. Download [Obsidian](https://apps.apple.com/us/app/obsidian-connected-notes/id1557175442)
+2. Create empty local vault in Obsidian called [Your Team Name].
+3. Close Obsidian
+4. Fork repo https://github.com/danrfletcher/Agile-Obsidian
+5. Download [iSH](https://apps.apple.com/us/app/ish-shell/id1436902243).
+6. Open iSH & run: 
 ```
 apk update \
 && apk add git \
