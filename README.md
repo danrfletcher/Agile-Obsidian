@@ -20,5 +20,6 @@ apk update \
 4. Reopen Obsidian, select trust this author & enable plugins.
 5. Click the 3 lines in the bottom right of the screen & click ‘Relay’.
 6. Enter the share code for the team’s Obsidian Relay server. 
+7. Add team relay folders to vault.
 
 
