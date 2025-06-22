@@ -1,1 +1,0 @@
-<mark style="background: #FFB86CA6;"><strong>Paid  / </strong></mark>

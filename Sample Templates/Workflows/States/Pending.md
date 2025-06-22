@@ -1,1 +1,0 @@
-<mark style="background: #FEE12B;">🕒 Resumes: <strong></strong></mark> 

@@ -1,1 +1,0 @@
-<mark style="background: #2E8B57;"><strong>Paid in Full / </strong></mark>

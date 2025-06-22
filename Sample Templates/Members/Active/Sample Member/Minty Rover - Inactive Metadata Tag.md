@@ -1,1 +1,0 @@
-<mark class="inactive-minty-rover" style="background: #CACFD9A6;"><strong><a href="Minty Rover" class="internal-link">👋 Minty Rover</a></strong></mark>

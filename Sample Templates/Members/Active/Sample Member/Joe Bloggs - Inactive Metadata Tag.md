@@ -1,1 +1,0 @@
-<mark class="inactive-joe-bloggs" style="background: #CACFD9A6;"><strong><a href="Joe Bloggs" class="internal-link">👋 Joe Bloggs</a></strong></mark>

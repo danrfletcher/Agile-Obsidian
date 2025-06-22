@@ -1,1 +1,0 @@
-<mark style="background: linear-gradient(to right, #00B7FF, #A890FE);"><strong>📝 :</strong></mark> **As a** , **I want to** , **so that** 

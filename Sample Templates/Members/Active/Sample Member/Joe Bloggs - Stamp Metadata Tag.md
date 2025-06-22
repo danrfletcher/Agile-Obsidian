@@ -1,1 +1,0 @@
-<sub><mark style="background: linear-gradient(to right, #dd3e54, #6be585);"><strong>📨 Joe Bloggs  {{date:YYYY-MM-DD HH:MM}}</strong></mark></sub>

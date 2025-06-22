@@ -1,1 +1,0 @@
-<mark style="background: #00A86B;"><strong>💝 </strong></mark>

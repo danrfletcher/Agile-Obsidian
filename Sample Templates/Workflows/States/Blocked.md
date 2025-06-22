@@ -1,1 +1,0 @@
-<mark style="background: #FF5582A6;">⛔ Requires: <a class="internal-link" href=""><strong></strong></a></mark>

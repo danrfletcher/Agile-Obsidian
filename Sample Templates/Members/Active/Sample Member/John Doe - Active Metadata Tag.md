@@ -1,1 +1,0 @@
-<mark class="active-john-doe" style="background: #BBFABBA6;"><strong><a href="John Doe" class="internal-link">👋 John Doe</a></strong></mark>

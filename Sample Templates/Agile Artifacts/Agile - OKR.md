@@ -1,1 +1,0 @@
-<mark style="background: linear-gradient(to left, #38ADAE, #CD395A);"><strong>🎯 </strong></mark>

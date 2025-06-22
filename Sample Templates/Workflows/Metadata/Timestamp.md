@@ -1,1 +1,0 @@
-<mark style="background: #CACFD9A6;"><strong>🕔 {{date:YYYY-MM-DD HH:MM:SS}}</strong></mark>
