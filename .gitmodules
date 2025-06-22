@@ -2,3 +2,6 @@
 	path = .obsidian
 	url = https://github.com/danrfletcher/.obsidian
 	branch = main
+[submodule "Templates/Sample Templates"]
+	path = Templates/Sample Templates
+	url = https://github.com/danrfletcher/Agile-Obsidian-Sample-Templates.git
