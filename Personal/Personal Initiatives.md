@@ -1,0 +1,22 @@
+---
+cssclasses:
+  - full-width-edit
+  - full-width-preview
+---
+- 🚀 **Now**
+	- [/] <a href="Personal Priorities#^c9fbcd" class="internal-link">⬆️</a> <mark style="background: #CACFD9A6;"><strong>🏆 Michael Smith Debt Collection</strong></mark> <mark class="active-joe-bloggs internal-link" style="background: #BBFABBA6;"><strong><a href="Joe Bloggs">👋 Joe Bloggs</a></strong></mark> 🎯2025-08-23
+		- [/] Email to confirm repayment plan for $12,000
+		- [ ] Calculate final settlement including late fees, interest, and collection agency charges
+		- [ ] Send final invoice to Michael Smith
+		- [ ] Follow up for payment confirmation
+	- [/] <a href="Personal Priorities#^6dc4fc" class="internal-link">⬆️</a> <mark style="background: #CACFD9A6;"><strong>🎖️ Ford F-150 Maintenance for Daily Use</strong></mark> <mark class="active-joe-bloggs internal-link" style="background: #BBFABBA6;"><strong><a href="Joe Bloggs">👋 Joe Bloggs</a></strong></mark> 💤2025-07-25
+		- [/] <mark style="background: #CACFD9A6;"><strong>🏆 Insurance Renewal</strong></mark> 
+		- [ ] <mark style="background: #CACFD9A6;"><strong>🏆 Replace Brake Pads</strong></mark>
+		- [ ] <mark style="background: #CACFD9A6;"><strong>🏆 Oil Change</strong></mark>
+		- [ ] <mark style="background: #CACFD9A6;"><strong>🏆 General Inspection</strong></mark>
+			- [ ] Check for engine warning lights
+			- [ ] Inspect tire tread and alignment
+		- [ ] <mark style="background: #CACFD9A6;"><strong>🏆 Replace Air Filter</strong></mark>
+		- [ ] <mark style="background: #CACFD9A6;"><strong>🏆 Battery Health Check</strong></mark>
+- 🛠️ **Later**
+- 📂 **[[Personal Priorities]]**

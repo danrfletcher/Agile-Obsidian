@@ -4,15 +4,12 @@ cssclasses:
   - full-width-preview
 "obsidianUIMode:": preview
 ---
-## ✏️ Notes
-- [t] Minty, regarding the onboarding email campaign, what's our timeline for finalizing the email templates and integrating them with the email service provider? <sub><mark style="background: linear-gradient(to right, #dd3e54, #6be585);"><strong>📨 John Doe 2025-06-08 19:06</strong></mark></sub>
-- [t] Minty, can you provide a detailed breakdown of the resources needed for the UX review of the new signup UI mockups, and how we can ensure it aligns with the overall project goals? <sub><mark style="background: linear-gradient(to right, #dd3e54, #6be585);"><strong>📨 John Doe 2025-06-08 19:06</strong></mark></sub>
-- [t] Minty, what specific metrics will we use to measure the success of the Customer Onboarding Revamp, and how frequently will we review these metrics to ensure we're on track? <sub><mark style="background: linear-gradient(to right, #dd3e54, #6be585);"><strong>📨 Joe Bloggs  2025-06-08 19:06</strong></mark></sub>
+![[Agenda]]
 ___
 ```dataviewjs
 const version = "2.6.0";
-const teamName = "Nueral";
-const overrideTeamMemberName = false;
+const teamName = null;
+const overrideTeamMemberName = "Joe Bloggs"; // Replace with your name
 
 // TASKS ----------------------------------------------------------------------------------------------------
 const fullName = overrideTeamMemberName || dv.current().file.name;
@@ -811,4 +808,3 @@ projectStatusSelect.addEventListener('change', evt => {
 // INITIAL RENDER ------------------------------------------------------------------------------------------
 updateView(viewOptions[viewSelect.selectedIndex].render);
 ```
-

@@ -3,17 +3,17 @@ cssclasses:
   - full-width-edit
   - full-width-preview
 ---
-- [ ] **2025**
-	- [ ] **Q3**
-		- [ ] <mark style="background: linear-gradient(to left, #38ADAE, #CD395A);">🎯 Improve Customer Onboarding Experience</mark> <mark class="active-john-doe" style="background: #BBFABBA6;"><a href="John Doe" class="internal-link">👋 John Doe</a></mark>
+- [/] **2025**
+	- [/] **Q3**
+		- [x] <mark style="background: linear-gradient(to left, #38ADAE, #CD395A);"><strong>🎯 Improve Customer Onboarding Experience</strong></mark> <mark class="active-john-doe" style="background: #BBFABBA6;"><a href="John Doe" class="internal-link">👋 John Doe</a></mark> ^dce7f1
 			- [E] Increase signup completion rate by 20%
 			- [E] Reduce onboarding support tickets by 30% 
 			- [E] Launch new onboarding email campaign by Q3
-		- [ ] <mark style="background: linear-gradient(to left, #38ADAE, #CD395A);">🎯 Enhance Mobile App Performance</mark> <mark class="active-joe-bloggs" style="background: #BBFABBA6;"><a href="Joe Bloggs" class="internal-link">👋 Joe Bloggs</a></mark>
+		- [/] <mark style="background: linear-gradient(to left, #38ADAE, #CD395A);"><strong>🎯 Enhance Mobile App Performance</strong></mark> <mark class="active-joe-bloggs" style="background: #BBFABBA6;"><a href="Joe Bloggs" class="internal-link">👋 Joe Bloggs</a></mark> ^192e6f
 			- [E] Reduce app load time by 40%
 			- [E] Decrease memory usage by 25%
 			- [E] Achieve 4.5+ app store rating
-		- [ ] <mark style="background: linear-gradient(to left, #38ADAE, #CD395A);">🎯 Deploy AI Chatbot for Customer Support</mark> <mark class="active-minty-rover" style="background: #BBFABBA6;"><a href="Minty Rover" class="internal-link">👋 Minty Rover</a></mark>
+		- [/] <mark style="background: linear-gradient(to left, #38ADAE, #CD395A);"><strong>🎯 Deploy AI Chatbot for Customer Support</strong></mark> <mark class="active-minty-rover" style="background: #BBFABBA6;"><a href="Minty Rover" class="internal-link">👋 Minty Rover</a></mark> ^d141c9
 			- [E] Integrate chatbot with 3 key support channels
 			- [E] Achieve 80% chatbot resolution rate
 			- [E] Reduce average support response time by 50%

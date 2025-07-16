@@ -2,13 +2,14 @@
 cssclasses:
   - full-width-edit
   - full-width-preview
+"obsidianUIMode:": preview
 ---
 ## ✏️ Notes
 
 
 ___
 ```dataviewjs
-const version = "2.3.5";
+const version = "2.6.0";
 const teamName = "Nueral";
 const overrideTeamMemberName = false;
 
@@ -30,10 +31,34 @@ if (teamName) {
     folderPages = dv.pages();
 }
 
+function stripFakeHeaders(nodes) {
+  const out = [];
+  for (const node of nodes) {
+    const isNowHeader = node.task === false && /🚀\s*\*\*Now\*\*/.test(node.text);
+    
+    if (isNowHeader) {
+	  // Allow "Now" headers only
+      for (const child of node.children || []) {
+        child._parentId = node._parentId;
+        child.parent    = node.parent;
+      }
+      out.push(...stripFakeHeaders(node.children || []));
+    }
+    else {
+      // Disallow all other headers nodes (including other fake headers)
+      out.push({
+        ...node,
+        children: stripFakeHeaders(node.children || [])
+      });
+    }
+  }
+  return out;
+}
+
 // Process tasks and assign unique IDs
 let currentTasks = [];
 folderPages.forEach(page => {
-    const tasks = page.file.tasks ? page.file.tasks.values : [];
+    const tasks = stripFakeHeaders(page.file.tasks ? page.file.tasks.values : []);
     tasks.forEach(task => {
         const uniqueId = `${page.file.path}:${task.line}`;
         const enhancedTask = {
@@ -69,6 +94,65 @@ const isRelevantToday     = task => {
            (( !start   || start   <= today) &&
             ( !scheduled || scheduled <= today));
 };
+const hasTargetDate = task => { 
+	if (!task || typeof task.text !== "string") return false; 
+	const match = task.text.match(/🎯\s*(\d{4}-\d{2}-\d{2})/); 
+	return match ? match[1] : false; 
+};
+
+const getEarliestDate = task => {
+	const candidates = [];
+	const nonStart = [];
+	if (task.due) nonStart.push(task.due);
+	if (task.scheduled) nonStart.push(task.scheduled);
+	const m = hasTargetDate(task);
+	if (m) nonStart.push(m);
+	if (nonStart.length) candidates.push(...nonStart);
+	else if (task.start) candidates.push(task.start);
+	const dates = candidates.map(d => new Date(d)).filter(d => !isNaN(d));
+	if (!dates.length) return new Date(8640000000000000);
+	return dates.reduce((a,b) => a < b ? a : b);
+};
+
+// Check if task is snoozed for the member
+const isSleeping = task => {
+  if (!task || typeof task.text !== "string") return false;
+
+  // Find all snooze instances (unchanged)
+  const sleepMatches = [...task.text.matchAll(/💤\s*(?:<span[^>]*style="display:\s*none"[^>]*>([^<]*)<\/span>)?\s*(\d{4}-\d{2}-\d{2})?/g)];
+  if (!sleepMatches.length) return false;
+
+  const today = new Date();
+  today.setHours(0, 0, 0, 0);
+
+  // Check if there's a global snooze (no member name specified)
+  const globalSnooze = sleepMatches.find(match => !match[1]);
+  if (globalSnooze) {
+    if (!globalSnooze[2]) return true; // Global snooze with no date (indefinite, as before)
+    
+    const target = new Date(globalSnooze[2]);
+    if (isNaN(target)) return false;
+    target.setHours(0, 0, 0, 0);
+    if (target > today) return true; // Global snooze still active
+    
+    return false; // Unsnooze after expiration date
+  }
+
+  // No global snooze, check for current team member's snooze (unchanged, as it seems correct)
+  const memberSnooze = sleepMatches.find(match => 
+    match[1] === teamMemberName
+  );
+  
+  if (!memberSnooze) return false; // Current member not in snooze list
+
+  // Current member has a snooze entry
+  if (!memberSnooze[2]) return true; // Member snooze with no date (indefinite)
+
+  const target = new Date(memberSnooze[2]);
+  if (isNaN(target)) return false;
+  target.setHours(0, 0, 0, 0);
+  return target > today; // Snoozed only if date is future
+};
 
 // Build map of children for every task
 const childrenMap = new Map();
@@ -78,6 +162,11 @@ currentTasks.forEach(t => {
 		childrenMap.get(t._parentId).push(t);
 	}
 });
+
+const deepClone = obj =>
+	typeof structuredClone === "function"
+		? structuredClone(obj)
+		: JSON.parse(JSON.stringify(obj));
 
 // OKR IDENTIFICATION ---------------------------------------------------------------------------------------
 const isOKR = task => {
@@ -148,65 +237,94 @@ const projectView = (status = true) => {
         return last;
     }
 
-    // --- FULL OKR PROCESSING USING direct parent → child ---
-    const assignedOKRs = currentTasks.filter(task =>
-        isOKR(task) &&
-        activeForMember(task, status) &&
-        !task.completed &&
-        !isCancelled(task) &&
-        task.status !== "-" &&
-        isRelevantToday(task)
-    );
+	// --- FULL OKR PROCESSING USING direct parent → child ---
+	const assignedOKRs = currentTasks.filter(task =>
+	    isOKR(task) &&
+	    activeForMember(task, status) &&
+	    !task.completed &&
+	    !isCancelled(task) &&
+	    task.status !== "-" &&
+	    isRelevantToday(task)
+	);
 	const assignedOKRSet = new Set(assignedOKRs.map(t => t._uniqueId));
 	
 	function findLinkedOKRs(okrSet) {
-	    // Array to store the linked OKR relationships
 	    const linkedOKRs = [];
-	    
-	    // Convert assignedOKRSet to an array of task IDs
 	    const assignedOKRIds = Array.from(okrSet);
-	    
-	    // For each assigned OKR
+	
 	    assignedOKRIds.forEach(okrId => {
 	        const okrTask = taskMap.get(okrId);
-	        if (!okrTask) {
-	            return;
-	        }
-	        
-	        // Check if the OKR text ends with a 6-digit code pattern
+	        if (!okrTask) return;
+	
+	        // OKR must end with a ^XXXXXX code (unchanged)
 	        const codeMatch = okrTask.text.match(/\^([A-Za-z0-9]{6})$/);
-	        if (!codeMatch) {
-	            return;
-	        }
-	        
-	        // Extract the 6-digit code
+	        if (!codeMatch) return;
+	
 	        const sixDigitCode = codeMatch[1];
-	        
-	        // Find all tasks that contain the pattern code">🔗🎯 (without square brackets)
 	        const linkedPattern = new RegExp(`${sixDigitCode}">🔗🎯`);
-	        
-	        // Search through all tasks for links to this OKR & modify parent
-	        const linkedTasks = currentTasks
-	            .filter(task => 
-	                linkedPattern.test(task.text));
-	        
-	        // Add to our results
-	        if (linkedTasks.length > 0) {
-	            // Loop through linkedTasks to set parent and _parentId
-	            for (let i = 0; i < linkedTasks.length; i++) {
-	                linkedTasks[i].parent = okrTask.line;
-	                linkedTasks[i]._parentId = okrTask._uniqueId;
-	                linkedTasks[i].status = "!";
+	
+	        // Grab raw linked tasks (unchanged)
+	        const rawLinked = currentTasks.filter(t => linkedPattern.test(t.text));
+	        if (!rawLinked.length) return;
+	
+	        // NEW: Group linked tasks by their unique top ancestor (root) to handle duplicates/overlaps
+	        const rootsMap = new Map(); // Key: root _uniqueId, Value: array of linked tasks under that root
+	        rawLinked.forEach(linkedTask => {
+	            const root = getTopAncestor(linkedTask); // Walk up to top ancestor (using existing function)
+	            if (!root) return;
+	            if (!rootsMap.has(root._uniqueId)) {
+	                rootsMap.set(root._uniqueId, []);
 	            }
-	            
+	            rootsMap.get(root._uniqueId).push(linkedTask);
+	        });
+	
+	        // NEW: For each unique root, clone the full subtree, prune it, and mark linked tasks with 'P'
+	        const clonedLinkedTrees = [];
+	        rootsMap.forEach((linkedTasksInRoot, rootId) => {
+	            const originalRoot = taskMap.get(rootId);
+	            const clonedRoot = deepClone(buildFullSubtree(originalRoot)); // Clone full subtree (using existing function)
+	
+	            // Prune the cloned tree to only include paths to linked tasks (similar to processTaskHierarchy)
+	            function pruneToLinked(node) {
+	                if (!node) return null;
+	
+	                // Recursively prune children
+	                const prunedChildren = (node.children || [])
+	                    .map(child => pruneToLinked(child))
+	                    .filter(Boolean);
+	
+	                // Check if this node is a linked task (set 'P' here)
+	                const isLinked = linkedTasksInRoot.some(lt => lt._uniqueId === node._uniqueId);
+	                if (isLinked) {
+	                    node.status = "p"; // Set 'P' on actual linked tasks (per your request)
+	                }
+	
+	                // Include this node if it's linked or has linked descendants
+	                if (isLinked || prunedChildren.length > 0) {
+	                    // Update parent relationships in the cloned tree for coherence
+	                    prunedChildren.forEach(child => {
+	                        child.parent = node.line; // Align parent to cloned node
+	                        child._parentId = node._uniqueId;
+	                    });
+	                    return { ...node, children: prunedChildren };
+	                }
+	                return null;
+	            }
+	
+	            const prunedClonedRoot = pruneToLinked(clonedRoot);
+	            if (prunedClonedRoot) {
+	                clonedLinkedTrees.push(prunedClonedRoot);
+	            }
+	        });
+	
+	        if (clonedLinkedTrees.length > 0) {
 	            linkedOKRs.push({
 	                sourceOKR: okrTask,
-	                linkedTasks: linkedTasks
+	                linkedTrees: clonedLinkedTrees // NEW: Return cloned/pruned trees instead of flat tasks
 	            });
 	        }
 	    });
 	
-	    console.log("Final linked OKRs:", linkedOKRs);
 	    return linkedOKRs;
 	}
 	
@@ -217,30 +335,30 @@ const projectView = (status = true) => {
 	).map(id => taskMap.get(id));
 	
 	function buildOKRSubtree(node, isOKRNode = false) {
-	    // Get all children of the current node
+	    // Get all children of the current node (unchanged)
 	    const children = childrenMap.get(node._uniqueId) || [];
 	    
-	    // Check if this node is an assigned OKR
+	    // Check if this node is an assigned OKR (unchanged)
 	    const isAssignedOKR = assignedOKRSet.has(node._uniqueId);
 	
-	    // If this is an assigned OKR, mark it for the recursive calls
+	    // If this is an assigned OKR, mark it for the recursive calls (unchanged)
 	    if (isAssignedOKR) {
 	        isOKRNode = true;
 	    }
 	
-	    // Process children differently based on whether this is an OKR node
+	    // Process children differently based on whether this is an OKR node (unchanged)
 	    if (isOKRNode) {
-	        // For OKR nodes or their descendants, include ALL children
+	        // For OKR nodes or their descendants, include ALL children (unchanged)
 	        let processedChildren = children.map(child => 
 	            buildOKRSubtree(child, true)
 	        );
 	
-	        // If this node is an assigned OKR, append linkedTasks (if any)
+	        // If this node is an assigned OKR, append linkedTrees (if any) – MODIFIED to use trees
 	        if (isAssignedOKR) {
-	            // Find the linkedOKR entry for this node
+	            // Find the linkedOKR entry for this node (unchanged)
 	            const linkedEntry = linkedOKRs.find(entry => entry.sourceOKR._uniqueId === node._uniqueId);
-	            if (linkedEntry && linkedEntry.linkedTasks.length > 0) {
-	                // Add a blank separator task
+	            if (linkedEntry && linkedEntry.linkedTrees?.length > 0) { // Changed from linkedTasks to linkedTrees
+	                // Add a blank separator task (unchanged)
 	                const blankTask = {
 	                    id: node.text + '-' + Date.now() + '-' + Math.random().toString(36).slice(2,7),
 	                    symbol: "-",
@@ -256,24 +374,26 @@ const projectView = (status = true) => {
 	                    fullyCompleted: false
 	                };
 	                
-	                // Add the separator first, then the linked tasks
+	                // Add the separator first, then the linked trees (NEW: attach full pruned trees)
 	                processedChildren.push(blankTask);
-	                
-	                // Then add the linked tasks
-	                const linkedTaskNodes = linkedEntry.linkedTasks.map(task => ({ ...task, children: [] }));
-	                processedChildren = processedChildren.concat(linkedTaskNodes);
+	                linkedEntry.linkedTrees.forEach(tree => {
+	                    // Set parent relationship on the cloned root for rendering coherence
+	                    tree.parent = node.line;
+	                    tree._parentId = node._uniqueId;
+	                });
+	                processedChildren = processedChildren.concat(linkedEntry.linkedTrees);
 	            }
 	        }
 	
-	        // Return the node with all its children (including linked tasks)
+	        // Return the node with all its children (including linked trees) – unchanged
 	        return { ...node, children: processedChildren };
 	    } else {
-	        // For non-OKR nodes, only include children that lead to OKRs
+	        // For non-OKR nodes, only include children that lead to OKRs (unchanged)
 	        const filteredChildren = children
 	            .map(child => buildOKRSubtree(child, false))
 	            .filter(child => child !== null);
 	            
-	        // Only include this node if it's an assigned OKR or has OKR descendants
+	        // Only include this node if it's an assigned OKR or has OKR descendants (unchanged)
 	        if (isAssignedOKR || filteredChildren.length) {
 	            return { ...node, children: filteredChildren };
 	        }
@@ -423,17 +543,22 @@ const projectView = (status = true) => {
                  !isEpic(task) &&
                  !isStory(task) &&
                  !isOKR(task) &&
+                 !isSleeping(task) &&
                  task.status !== "O" &&
                  task.status !== "d" &&
                  task.status !== "A",
          parentFinders
     );
     const prunedStories = processTaskType(
-         task => isDirectlyAssigned(task) && getTaskType(task) === "story",
+         task => isDirectlyAssigned(task) &&
+	         !isSleeping(task) &&
+	         getTaskType(task) === "story",
          parentFinders.slice(0,2)
     );
     const prunedEpics   = processTaskType(
-         task => isDirectlyAssigned(task) && getTaskType(task) === "epic",
+         task => isDirectlyAssigned(task) && 
+	         !isSleeping(task) &&
+	         getTaskType(task) === "epic",
          parentFinders.slice(0,1)
     );
 
@@ -454,7 +579,7 @@ const projectView = (status = true) => {
 	    if (disallowedMarkers.some(m => task.text.includes(m))) return null;
 	
 	    const hasAllowedMarker = allowedMarkers.some(m => task.text.includes(m));
-	    const hasAllowedStatus = (task.status === "d" || task.status === "A") && activeForMember(task, status);
+	    const hasAllowedStatus = (task.status === "d" || task.status === "A");
 	
 	    // Only disallow "no marker" if NOT a root and not allowed by status+assignment
 	    if (!isRoot && !hasAllowedMarker && !hasAllowedStatus) return null;
@@ -501,26 +626,6 @@ const projectView = (status = true) => {
             const isMe = m?.[1] === teamMemberName;
             return isMe || (tree.children?.length > 0);
         });
-    function stripFakeHeaders(nodes) {
-      const out = [];
-      for (const node of nodes) {
-        if (node.task === false) {
-          for (const child of node.children || []) {
-            child._parentId = node._parentId;
-            child.parent    = node.parent;
-          }
-          out.push(...stripFakeHeaders(node.children || []));
-        }
-        else {
-          out.push({
-            ...node,
-            children: stripFakeHeaders(node.children || [])
-          });
-        }
-      }
-      return out;
-    }
-    responsibilityTasks = stripFakeHeaders(responsibilityTasks);
 
     // INITIATIVES --------------------------------------------------------------------------------------------
     const createHeader = text => ({
@@ -547,23 +652,24 @@ const projectView = (status = true) => {
         return "other";
     };
     let ownInitiatives = currentTasks
-      .filter(task => task.text && isInitiative(task))
+      .filter(task => task.text && isInitiative(task) && !isSleeping(task))
       .map(initiative => {
           if (!childrenMap.get(initiative._uniqueId)) childrenMap.set(initiative._uniqueId, []);
           const epics = (childrenMap.get(initiative._uniqueId) || [])
-            .filter(ep => isEpic(ep) && !ep.completed);
+            .filter(ep => isEpic(ep) && !ep.completed && !isCancelled(ep));
           const buckets = { inProgress:[], todo:[], blocked:[], waiting:[], pending:[], delegated:[], other:[] };
-          epics.forEach(ep => {
-              const cat = categorizeEpic(ep);
-              buckets[cat].push({ ...ep, children: [] });
+          epics
+	          .filter(ep => !isSleeping(ep))
+	          .forEach(ep => {
+	              const cat = categorizeEpic(ep);
+	              buckets[cat].push({ ...ep, children: [] });
           });
           const nonEmpty = Object.values(buckets).filter(arr => arr.length).length;
           const sorted = [];
           ["inProgress","todo","blocked","waiting","pending","delegated","other"].forEach(cat => {
               if (!buckets[cat].length) return;
-              if (nonEmpty > 1) sorted.push(createHeader("✏️"));
-              if (cat === "todo") sorted.push(...buckets[cat].slice(0,3));
-              else sorted.push(...buckets[cat]);
+              if (nonEmpty > 1 && cat !== "todo") sorted.push(createHeader("✏️"));
+              if (cat !== "todo") sorted.push(...buckets[cat]);
           });
           return { ...initiative, children: sorted };
       })
@@ -598,7 +704,7 @@ const deadlineView = (completed = false, taskList = currentTasks, header = "❗ 
         if (
             task.due ||
             task.scheduled ||
-            /🎯\s*\d{4}-\d{2}-\d{2}/.test(task.text) ||
+            hasTargetDate(task) ||
             isMarkedCompleted(task)
         ) return true;
         if (task.start) {
@@ -612,19 +718,6 @@ const deadlineView = (completed = false, taskList = currentTasks, header = "❗ 
     const isTaskAssignedToUser = (task, name) => {
         const m = task.text.match(/active-([^\s]+)/);
         return !m || m[1] === name;
-    };
-    const getEarliestDate = task => {
-        const candidates = [];
-        const nonStart = [];
-        if (task.due) nonStart.push(task.due);
-        if (task.scheduled) nonStart.push(task.scheduled);
-        const m = task.text.match(/🎯\s*(\d{4}-\d{2}-\d{2})/);
-        if (m) nonStart.push(m[1]);
-        if (nonStart.length) candidates.push(...nonStart);
-        else if (task.start) candidates.push(task.start);
-        const dates = candidates.map(d => new Date(d)).filter(d => !isNaN(d));
-        if (!dates.length) return new Date(8640000000000000);
-        return dates.reduce((a,b) => a < b ? a : b);
     };
     const getCompletionDate = task => {
         const m = task.text.match(/✅\s(\d{4}-(?:0[1-9]|1[0-2])-(?:0[1-9]|[12]\d|3[01]))/);
