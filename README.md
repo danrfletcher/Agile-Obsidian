@@ -8,7 +8,7 @@
 3. Clone the Repo
 	1. Navigate to the the location you would like your Agile Obsidian vault to be e.g. ‘Documents’. 
 	2. Open this folder in your command line utility (right click on the folder & click ‘open in terminal’ or similar depending on your system).
-	3. Paste the following command `git clone [YOUR FORKED REPO URL].git`
+	3. Paste the following command `git config --global submodule.recurse true && git clone [YOUR FORKED REPO URL].git && git submodule update --init --recursive`
 		- Replace [YOUR FORKED REPO URL] with the URL of your forked repo.
 		- If using the existing repo, replace with https://github.com/danrfletcher/Agile-Obsidian
 		- You may need to enter your GitHub credentials if asked, **your GitHub password will not work**. Instead use a GitHub ‘Personal Access Token’ with read/write access to your repositories when asked for your password. You can find out more about creating one [here](https://docs.github.com/en/authentication/keeping-your-account-and-data-secure/managing-your-personal-access-tokens).
