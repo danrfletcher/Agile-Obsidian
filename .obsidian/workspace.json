@@ -1,0 +1,304 @@
+{
+  "main": {
+    "id": "ffe70cb6e2f5c293",
+    "type": "split",
+    "children": [
+      {
+        "id": "f7c34a2ef89741f7",
+        "type": "tabs",
+        "children": [
+          {
+            "id": "0118ffee691e92ff",
+            "type": "leaf",
+            "state": {
+              "type": "markdown",
+              "state": {
+                "file": "Sample Team/Sample Team Projects/Sample Team Initiatives/Sample Team Initiatives.md",
+                "mode": "source",
+                "source": false
+              },
+              "icon": "lucide-file",
+              "title": "Sample Team Initiatives"
+            }
+          },
+          {
+            "id": "930151af24750774",
+            "type": "leaf",
+            "pinned": true,
+            "state": {
+              "type": "terminal:terminal",
+              "state": {
+                "terminal:terminal": {
+                  "cwd": "C:\\Users\\Ownerpc\\Documents\\Nueral Sample Vault",
+                  "focus": false,
+                  "profile": {
+                    "args": [],
+                    "executable": "C:\\Windows\\System32\\wsl.exe",
+                    "name": "WSL",
+                    "platforms": {
+                      "win32": true
+                    },
+                    "pythonExecutable": "python3",
+                    "restoreHistory": true,
+                    "successExitCodes": [
+                      "0",
+                      "SIGINT",
+                      "SIGTERM"
+                    ],
+                    "terminalOptions": {
+                      "documentOverride": null
+                    },
+                    "type": "integrated",
+                    "useWin32Conhost": true
+                  },
+                  "serial": {
+                    "columns": 103,
+                    "data": "root@DESKTOP-HVDQOG9:/mnt/c/Users/Ownerpc/Documents/Nueral Sample Vault# git init\r\nInitialized empty Git repository in /mnt/c/Users/Ownerpc/Documents/Nueral Sample Vault/.git/\r\nroot@DESKTOP-HVDQOG9:/mnt/c/Users/Ownerpc/Documents/Nueral Sample Vault# git branch -M main\r\nroot@DESKTOP-HVDQOG9:/mnt/c/Users/Ownerpc/Documents/Nueral Sample Vault# git remote add origin https://etcher/Agile-Obsidian.git\r\nroot@DESKTOP-HVDQOG9:/mnt/c/Users/Ownerpc/Documents/Nueral Sample Vault# git push -u origin main\r\nerror: src refspec main does not match any\r\n\u001b[31merror: failed to push some refs to 'https://github.com/danrfletcher/Agile-Obsidian.git'\r\n\u001b[0mroot@DESKTOP-HVDQOG9:/mnt/c/Users/Ownerpc/Documents/Nueral Sample Vault# ^C\r\nroot@DESKTOP-HVDQOG9:/mnt/c/Users/Ownerpc/Documents/Nueral Sample Vault# git commit -m \"First Commit\"\r\nOn branch main\r\n\r\nInitial commit\r\n\r\nUntracked files:\r\n  (use \"git add <file>...\" to include in what will be committed)\r\n\u001b[8C\u001b[31m.gitignore\r\n\u001b[8C.obsidian/\r\n\u001b[8CPersonal/\r\n\u001b[8CREADME.md\r\n\u001b[8CSample Team/\r\n\u001b[8CTemplates/\r\n\r\n\u001b[0mnothing added to commit but untracked files present (use \"git add\" to track)\r\nroot@DESKTOP-HVDQOG9:/mnt/c/Users/Ownerpc/Documents/Nueral Sample Vault# git add .\u001b[1B\u001b[82D",
+                    "rows": 54
+                  }
+                }
+              },
+              "pinned": true,
+              "icon": "terminal",
+              "title": "Terminal: root@DESKTOP-HVDQOG9: /mnt/c/Users/Ownerpc/Documents/Nueral Sample Vault"
+            }
+          }
+        ],
+        "currentTab": 1
+      }
+    ],
+    "direction": "vertical"
+  },
+  "left": {
+    "id": "61827ce07ad6aa95",
+    "type": "split",
+    "children": [
+      {
+        "id": "ff12a82dac2bf859",
+        "type": "tabs",
+        "children": [
+          {
+            "id": "d482fb77255d83c4",
+            "type": "leaf",
+            "state": {
+              "type": "file-explorer",
+              "state": {
+                "sortOrder": "alphabetical",
+                "autoReveal": false
+              },
+              "icon": "lucide-folder-closed",
+              "title": "Files"
+            }
+          },
+          {
+            "id": "09e7722c18434bb1",
+            "type": "leaf",
+            "state": {
+              "type": "search",
+              "state": {
+                "query": "",
+                "matchingCase": false,
+                "explainSearch": false,
+                "collapseAll": false,
+                "extraContext": false,
+                "sortOrder": "alphabetical"
+              },
+              "icon": "lucide-search",
+              "title": "Search"
+            }
+          },
+          {
+            "id": "b0a94cdefecea6e1",
+            "type": "leaf",
+            "state": {
+              "type": "bookmarks",
+              "state": {},
+              "icon": "lucide-bookmark",
+              "title": "Bookmarks"
+            }
+          },
+          {
+            "id": "9015cf58daece8a8",
+            "type": "leaf",
+            "state": {
+              "type": "quiet-outline",
+              "state": {},
+              "icon": "lines-of-text",
+              "title": "Quiet Outline"
+            }
+          }
+        ]
+      }
+    ],
+    "direction": "horizontal",
+    "width": 279
+  },
+  "right": {
+    "id": "a1cad90a45b23728",
+    "type": "split",
+    "children": [
+      {
+        "id": "956d8535b4f4b62a",
+        "type": "tabs",
+        "children": [
+          {
+            "id": "09d51c684810b7c7",
+            "type": "leaf",
+            "state": {
+              "type": "backlink",
+              "state": {
+                "file": "README.md",
+                "collapseAll": false,
+                "extraContext": false,
+                "sortOrder": "alphabetical",
+                "showSearch": false,
+                "searchQuery": "",
+                "backlinkCollapsed": false,
+                "unlinkedCollapsed": true
+              },
+              "icon": "links-coming-in",
+              "title": "Backlinks for README"
+            }
+          },
+          {
+            "id": "f92ab6e1d8931d01",
+            "type": "leaf",
+            "state": {
+              "type": "outgoing-link",
+              "state": {
+                "linksCollapsed": false,
+                "unlinkedCollapsed": true
+              },
+              "icon": "links-going-out",
+              "title": "Outgoing links"
+            }
+          },
+          {
+            "id": "e0d472139e468161",
+            "type": "leaf",
+            "state": {
+              "type": "git-view",
+              "state": {},
+              "icon": "git-pull-request",
+              "title": "Source Control"
+            }
+          },
+          {
+            "id": "66e340a41078b23f",
+            "type": "leaf",
+            "state": {
+              "type": "tag",
+              "state": {
+                "sortOrder": "frequency",
+                "useHierarchy": true,
+                "showSearch": false,
+                "searchQuery": ""
+              },
+              "icon": "lucide-tags",
+              "title": "Tags"
+            }
+          },
+          {
+            "id": "6d6af1132b5ec79e",
+            "type": "leaf",
+            "state": {
+              "type": "git-history-view",
+              "state": {},
+              "icon": "history",
+              "title": "History"
+            }
+          },
+          {
+            "id": "8f64469518c7c96f",
+            "type": "leaf",
+            "state": {
+              "type": "all-properties",
+              "state": {
+                "sortOrder": "frequency",
+                "showSearch": false,
+                "searchQuery": ""
+              },
+              "icon": "lucide-archive",
+              "title": "All properties"
+            }
+          },
+          {
+            "id": "76438670fa3a000e",
+            "type": "leaf",
+            "state": {
+              "type": "outline",
+              "state": {
+                "file": "Sample Team/Sample Team Projects/Sample Team Initiatives/Sample Team Initiatives.md",
+                "followCursor": false,
+                "showSearch": false,
+                "searchQuery": ""
+              },
+              "icon": "lucide-list",
+              "title": "Outline of Sample Team Initiatives"
+            }
+          }
+        ],
+        "currentTab": 2
+      }
+    ],
+    "direction": "horizontal",
+    "width": 334
+  },
+  "left-ribbon": {
+    "hiddenItems": {
+      "switcher:Open quick switcher": false,
+      "graph:Open graph view": false,
+      "canvas:Create new canvas": false,
+      "templates:Insert template": false,
+      "command-palette:Open command palette": false,
+      "dbfolder:Create a new database table": false,
+      "table-editor-obsidian:Advanced Tables Toolbar": false,
+      "cmdr:Open Temporary Note": false,
+      "terminal:Open terminal": false,
+      "obsidian-git:Open Git source control": false,
+      "custom-sort:Toggle custom sorting": false,
+      "obsidian-excalidraw-plugin:New drawing": false,
+      "system3-relay:Relay": false,
+      "homepage:Open homepage": false
+    }
+  },
+  "active": "930151af24750774",
+  "lastOpenFiles": [
+    "Sample Team/Sample Team Projects/Sample Team Initiatives/Sample Team Initiatives.md",
+    "Personal/Personal Docs/Finance.md",
+    "Sample Team/Sample Team Members/Minty Rover.md",
+    "Sample Team/Sample Team Members/John Doe.md",
+    "Sample Team/Sample Team Members/Joe Bloggs.md",
+    "README.md",
+    "Personal/Personal Priorities.md",
+    "agile_obsidian_documentation.md",
+    "Unconfirmed 363157.crdownload",
+    "Templates/Sample Team Templates/Joe Bloggs/Joe Bloggs - Snooze Subtasks.md",
+    "Templates/Sample Team Templates/Joe Bloggs/Joe Bloggs - Snooze.md",
+    "Templates/Sample Team Templates/John Doe",
+    "Templates/Sample Team Templates/Minty Rover",
+    "Templates/Sample Team Templates/Joe Bloggs",
+    "Templates/Sample Team Templates",
+    "Personal/Personal Docs/Mission.md",
+    "Personal/Personal Initiatives.md",
+    "Personal/Personal Docs/Agenda.md",
+    "Sample Team/Sample Team Projects/Sample Team Priorities.md",
+    "Sample Team/Sample Team Projects/Sample Team OKRs.md",
+    "Personal/Personal Docs/Archive",
+    "Personal/Personal Docs",
+    "Mission",
+    "Temp Note.md",
+    "Sample Team/Sample Team Projects/Sample Team Initiatives/Sample Team Completed.md",
+    "4913",
+    "Templates/Sample Templates/Workflows/States/Waiting.md",
+    "Templates/Sample Templates/Workflows/States/Pending.md",
+    "Templates/Sample Templates/Workflows/States/Blocked.md",
+    "Templates/Sample Templates/Workflows/States",
+    "Templates/Sample Templates/Workflows/Metadata/Timestamp.md",
+    "Templates/Sample Templates/Workflows/Metadata/Link to OKR.md",
+    "Templates/Sample Templates/Workflows/Metadata/Link to Any Artifact.md",
+    "Templates/Sample Templates/Workflows/Metadata/Datestamp.md",
+    "Templates/Sample Templates/Workflows/Metadata/Branch.md",
+    "Templates/Sample Templates/Workflows/Dates/Snooze.md"
+  ]
+}

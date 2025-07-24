@@ -1,0 +1,78 @@
+---
+cssclasses:
+  - full-width-edit
+  - full-width-preview
+"obsidianUIMode:": preview
+---
+- [O] [[Finance]] ^7f90af
+	- **Income & Expenditure**
+		- **Income**
+			- Salary: $7,140/m (after taxes)
+		- **Expenditures**
+			- **Recurring Payments**
+				- **Automatic Withdrawals**
+					- US - Chase - Geico Auto Insurance: -$185.50/m
+					- US - Chase - WeWork Office Subscription: -$210/m
+					- US - Chase - National Grid (Electric): -$95/m
+					- US - Chase - ConEdison (Gas): -$60/m
+					- US - Bank of America - Verizon Wireless (Mobile): -$70/m
+					- US - Bank of America - Spectrum Internet: -$80/m
+					- US - Chase - Fidelity IRA Contribution: -$200/m (Retirement Account)
+					- [-] US - Chase - Coinbase Recurring Buy: -$100/m (Investment Account) ❌ 2025-07-12
+					- [x] US - Chase - SoFi Personal Loan: -$150/m (Debt) ✅ 2025-07-12
+				- **Subscriptions**
+					- [Apple](https://appleid.apple.com/account/manage) - john.doe@email.com - iCloud+ (Photos & Cloud Storage): -$2.99/m
+					- [Apple](https://appleid.apple.com/account/manage) - john.doe@email.com - Fitbod (Gym Workout Tracker): -$7.99/m
+					- [ChatLLM](https://apps.abacus.ai/chatllm/admin/profile/?userG=JOHNDOE) - apps.abacus.ai/chatllm: -$10/m
+				- **Manual Transfers**
+					- Robinhood: -$200/m (Investment Account)
+					- US - Bank of America (Savings): -$300/m (Saving)
+			- **Budgets**
+				- Food: -$700/m
+				- Other: -$600/m
+	- **Assets & Liabilities**
+		- **Fixed Assets**
+			- **Houses**
+				- 123 Maple Drive, Brooklyn, NY 11201, USA: $420,000
+			- Vehicles ^6dc4fc
+				- Cars
+					- NY ABC123 – Tesla Model 3: $28,000
+					- NY XYZ789 – Ford F-150: $12,000
+				- RVs
+					- Winnebago Minnie Winnie: $5,000
+				- Boats
+					- Bayliner Element E16: $7,500
+			- Private Equity
+				- Acme Holdings LLC
+				- GreenTech Ventures Inc
+		- **Current Assets**
+			- **Current Accounts**
+				- US - Chase: $2,350.75 / ($3,000)
+				- US - Bank of America: $1,120.50 / ($2,000)
+				- US - Wells Fargo: $75.00 / ($500)
+				- US - Capital One: $15.25
+				- US - NBT Bank: $1.00
+				- PayPal Balance: $0.00
+			- **Savings Accounts**
+				- US - Bank of America (Savings): $24,500.00
+			- **Accounts Receivable** ^c9fbcd
+				- Michael Smith $12,000 ^574fcf
+			- **Investment Accounts**
+				- **Brokerage Accounts**
+					- Robinhood: $8,200.50
+				- **Crypto Accounts**
+					- Coinbase: $3,150.00
+					- MetaMask: $420.00
+				- **Retirement Accounts**
+					- Fidelity IRA: $18,750.00
+					- Vanguard 401(k)
+		- **Current Liabilities**
+			- **Credit Cards**
+				- US - Chase Sapphire: -$0.00 / $15,000
+				- US - Bank of America Cash Rewards: -$1,250.00 / $5,000
+				- US - Capital One Quicksilver: -$320.00 / $2,500
+				- US - PayPal Credit: -$0.00 / $1,500
+				- US - Affirm: -$0.00
+				- US - Afterpay: -$0.00
+			- **Loans**
+				- SoFi Personal Loan: -$3,600.00 / $7,200 / 48m / 3.5%APR

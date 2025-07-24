@@ -1,0 +1,14 @@
+{
+  "accentColor": "",
+  "baseFontSize": 17,
+  "enabledCssSnippets": [
+    "dashboard-read-line-length",
+    "tasks-backlink-to-icon",
+    "projects-full-width",
+    "optional-full-width",
+    "dashboard",
+    "read-line-length-full-width",
+    "custom-checkboxes"
+  ],
+  "cssTheme": "Encore"
+}

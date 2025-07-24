@@ -1,0 +1,35 @@
+{
+  "showGettingStartedBanner": false,
+  "hasMigratedDailyNoteSettings": true,
+  "hasMigratedWeeklyNoteSettings": false,
+  "daily": {
+    "format": "YYYY-MM-DD",
+    "folder": "/",
+    "template": "",
+    "enabled": true
+  },
+  "weekly": {
+    "format": "YYYY-[W]WW",
+    "template": "Archive/Templates/Projects/Sprint/Sprint.md",
+    "folder": "Projects/Sprints",
+    "enabled": false
+  },
+  "monthly": {
+    "format": "MMMM-YYYY",
+    "template": "",
+    "folder": "Library",
+    "enabled": false
+  },
+  "quarterly": {
+    "format": "YYYY-[Q]Q",
+    "template": "Archive/Templates/Projects/Quarterly OKR.md",
+    "folder": "Projects/Quarterly OKRs",
+    "enabled": false
+  },
+  "yearly": {
+    "format": "YYYY",
+    "template": "Archive/Templates/Projects/Yearly OKR.md",
+    "folder": "Projects/Yearly OKRs",
+    "enabled": false
+  }
+}

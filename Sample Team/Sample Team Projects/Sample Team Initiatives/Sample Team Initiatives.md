@@ -1,0 +1,137 @@
+---
+cssclasses:
+  - full-width-edit
+  - full-width-preview
+---
+- 🚀 **Now**
+	- [/] <mark style="background: #CACFD9A6;">🎖️ Customer Onboarding Revamp</mark> <mark class="active-john-doe" style="background: #BBFABBA6;"><a href="John Doe" class="internal-link">👋 John Doe</a></mark> <mark style="background: #000000; color: 878787"><a class="internal-link" href="Sample Team OKRs#^dce7f1">🔗🎯</a></mark>
+		- [ ] <mark style="background: #CACFD9A6;">🏆 Redesign Signup Flow</mark> 
+			- [ ] <mark style="background: linear-gradient(to right, #00B7FF, #A890FE);">📝 Implement backend signup API:</mark> **As a** new user, **I want to** have a seamless signup process, **so that** I can quickly start using the platform.
+				- [ ] Design wireframes 
+				- [ ] Review with UX team <mark class="active-minty-rover" style="background: #BBFABBA6;"><a href="Minty Rover" class="internal-link">👋 Minty Rover</a></mark>
+		- [ ] <mark style="background: #CACFD9A6;">🏆 Onboarding Email Campaign</mark> <mark class="active-minty-rover" style="background: #BBFABBA6;"><a href="Minty Rover" class="internal-link">👋 Minty Rover</a></mark>
+			- [ ] <mark style="background: linear-gradient(to right, #00B7FF, #A890FE);">📝 Draft email templates:</mark> **As a** marketing manager, **I want to** create engaging email templates, **so that** new users are effectively onboarded.
+				- [ ] Draft email templates
+				- [ ] Integrate email service provider <mark class="active-joe-bloggs" style="background: #BBFABBA6;"><a href="Joe Bloggs" class="internal-link">👋 Joe Bloggs</a></mark>
+	- [/] <mark style="background: #CACFD9A6;">🎖️ Mobile App Performance Boost</mark> <mark class="active-joe-bloggs" style="background: #BBFABBA6;"><a href="Joe Bloggs" class="internal-link">👋 Joe Bloggs</a></mark>
+		- [ ] <mark style="background: #CACFD9A6;">🏆 Optimize App Load Time</mark> <mark style="background: #000000; color: 878787"><a class="internal-link" href="Sample Team OKRs#^192e6f">🔗🎯</a></mark>
+			- [ ] <mark style="background: linear-gradient(to right, #00B7FF, #A890FE);">📝 Profile app startup sequence:</mark> **As a** developer, **I want to** identify performance bottlenecks, **so that** I can optimize the app load time.
+				- [ ] Profile app startup sequence 
+			- [ ] <mark style="background: linear-gradient(to right, #00B7FF, #A890FE);">📝 Refactor heavy components:</mark> **As a** senior developer, **I want to** refactor the heavy components, **so that** the app performs efficiently.
+				- [ ] Identify bottlenecks
+				- [ ] Rewrite rendering logic
+		- [ ] <mark style="background: #CACFD9A6;">🏆 Reduce Memory Usage</mark> <mark class="active-minty-rover" style="background: #BBFABBA6;"><a href="Minty Rover" class="internal-link">👋 Minty Rover</a></mark>
+			- [ ] <mark style="background: linear-gradient(to right, #00B7FF, #A890FE);">📝 Audit memory leaks:</mark> **As a** QA engineer, **I want to** audit memory leaks, **so that** the app's memory usage is optimized.
+				- [ ] Audit memory leaks
+			- [ ] <mark style="background: linear-gradient(to right, #00B7FF, #A890FE);">📝 Implement caching strategies:</mark> **As a** backend developer, **I want to** implement caching strategies, **so that** the app's memory usage is reduced.
+				- [ ] Implement caching strategies <mark class="active-john-doe" style="background: #BBFABBA6;"><a href="John Doe" class="internal-link">👋 John Doe</a></mark>
+	- [/] <mark style="background: #CACFD9A6;">🎖️ AI Chatbot Integration</mark> <mark class="active-minty-rover" style="background: #BBFABBA6;"><a href="Minty Rover" class="internal-link">👋 Minty Rover</a></mark>
+		- [ ] <mark style="background: #CACFD9A6;">🏆 Chatbot Backend Setup</mark>
+			- [ ] <mark style="background: linear-gradient(to right, #00B7FF, #A890FE);">📝 Setup NLP engine:</mark> **As a** AI engineer, **I want to** setup the NLP engine, **so that** the chatbot can understand user queries. <mark class="active-joe-bloggs" style="background: #BBFABBA6;"><strong><a href="Joe Bloggs" class="internal-link">👋 Joe Bloggs</a></strong></mark>
+				- [ ] Setup NLP engine <mark class="active-minty-rover" style="background: #BBFABBA6;"><a href="Minty Rover" class="internal-link">👋 Minty Rover</a></mark> <mark style="background: #000000; color: 878787"><a class="internal-link" href="Sample Team OKRs#^d141c9">🔗🎯</a></mark>
+			- [ ] <mark style="background: linear-gradient(to right, #00B7FF, #A890FE);">📝 Connect chatbot to customer database:</mark> **As a** database admin, **I want to** connect the chatbot to the customer database, **so that** it can access customer information.
+				- [ ] Connect chatbot to customer database <mark class="active-joe-bloggs" style="background: #BBFABBA6;"><a href="Joe Bloggs" class="internal-link">👋 Joe Bloggs</a></mark>
+		- [ ] <mark style="background: #CACFD9A6;">🏆 Chatbot UI Design</mark> <mark class="active-john-doe" style="background: #BBFABBA6;"><a href="John Doe" class="internal-link">👋 John Doe</a></mark>
+			- [ ] <mark style="background: linear-gradient(to right, #00B7FF, #A890FE);">📝 Design chat widget:</mark> **As a** UI designer, **I want to** design an intuitive chat widget, **so that** users can easily interact with the chatbot.
+				- [ ] Design chat widget
+			- [ ] <mark style="background: linear-gradient(to right, #00B7FF, #A890FE);">📝 Implement chat widget:</mark> **As a** frontend developer, **I want to** implement the chat widget, **so that** it is functional and user-friendly.
+				- [ ] Implement chat widget <mark class="active-minty-rover" style="background: #BBFABBA6;"><a href="Minty Rover" class="internal-link">👋 Minty Rover</a></mark>
+	- [ ] <mark style="background: #CACFD9A6;">🎖️ Data Analytics Dashboard</mark> <mark class="active-john-doe" style="background: #BBFABBA6;"><a href="John Doe" class="internal-link">👋 John Doe</a></mark> <mark style="background: #000000; color: 878787"><a class="internal-link" href="Sample Team OKRs#^dce7f1">🔗🎯</a></mark>
+		- [ ] <mark style="background: #CACFD9A6;">🏆 Data Pipeline Development</mark> 
+			- [ ] <mark style="background: linear-gradient(to right, #00B7FF, #A890FE);">📝 Build ETL processes:</mark> **As a** data engineer, **I want to** build ETL processes, **so that** data can be extracted, transformed, and loaded into the dashboard.
+				- [ ] Build ETL processes 
+			- [ ] <mark style="background: linear-gradient(to right, #00B7FF, #A890FE);">📝 Validate data accuracy:</mark> **As a** data analyst, **I want to** validate data accuracy, **so that** the dashboard provides reliable insights.
+				- [ ] Validate data accuracy <mark class="active-minty-rover" style="background: #BBFABBA6;"><a href="Minty Rover" class="internal-link">👋 Minty Rover</a></mark>
+		- [ ] <mark style="background: #CACFD9A6;">🏆 Dashboard UI</mark> <mark class="active-minty-rover" style="background: #BBFABBA6;"><a href="Minty Rover" class="internal-link">👋 Minty Rover</a></mark>
+			- [ ] <mark style="background: linear-gradient(to right, #00B7FF, #A890FE);">📝 Create dashboard wireframes:</mark> **As a** UX designer, **I want to** create dashboard wireframes, **so that** the dashboard is user-friendly and visually appealing.
+				- [ ] Create dashboard wireframes
+			- [ ] <mark style="background: linear-gradient(to right, #00B7FF, #A890FE);">📝 Develop interactive charts:</mark> **As a** frontend developer, **I want to** develop interactive charts, **so that** users can explore the data effectively.
+				- [ ] Develop interactive charts <mark class="active-joe-bloggs" style="background: #BBFABBA6;"><a href="Joe Bloggs" class="internal-link">👋 Joe Bloggs</a></mark>
+	- [ ] <mark style="background: #CACFD9A6;">🎖️ Security Enhancements</mark> <mark class="active-joe-bloggs" style="background: #BBFABBA6;"><a href="Joe Bloggs" class="internal-link">👋 Joe Bloggs</a></mark> <mark style="background: #000000; color: 878787"><a class="internal-link" href="Sample Team OKRs#^192e6f">🔗🎯</a></mark>
+		- [ ] <mark style="background: #CACFD9A6;">🏆 Implement 2FA</mark> 
+			- [ ] <mark style="background: linear-gradient(to right, #00B7FF, #A890FE);">📝 Design 2FA flow:</mark> **As a** security specialist, **I want to** design a secure 2FA flow, **so that** user accounts are protected.
+				- [ ] Design 2FA flow
+			- [ ] <mark style="background: linear-gradient(to right, #00B7FF, #A890FE);">📝 Integrate SMS and email 2FA:</mark> **As a** backend developer, **I want to** integrate SMS and email 2FA, **so that** users have multiple options for authentication.
+				- [ ] Integrate SMS and email 2FA <mark class="active-john-doe" style="background: #BBFABBA6;"><a href="John Doe" class="internal-link">👋 John Doe</a></mark>
+		- [ ] <mark style="background: #CACFD9A6;">🏆 Security Audit</mark> <mark class="active-minty-rover" style="background: #BBFABBA6;"><a href="Minty Rover" class="internal-link">👋 Minty Rover</a></mark>
+			- [ ] <mark style="background: linear-gradient(to right, #00B7FF, #A890FE);">📝 Conduct penetration testing:</mark> **As a** security consultant, **I want to** conduct penetration testing, **so that** vulnerabilities can be identified.
+				- [ ] Conduct penetration testing
+			- [ ] <mark style="background: linear-gradient(to right, #00B7FF, #A890FE);">📝 Patch vulnerabilities:</mark> **As a** system administrator, **I want to** patch vulnerabilities, **so that** the system is secure.
+				- [ ] Patch vulnerabilities <mark class="active-joe-bloggs" style="background: #BBFABBA6;"><a href="Joe Bloggs" class="internal-link">👋 Joe Bloggs</a></mark>
+	- [ ] <mark style="background: #CACFD9A6;">🎖️ Marketing Automation</mark> <mark class="active-minty-rover" style="background: #BBFABBA6;"><a href="Minty Rover" class="internal-link">👋 Minty Rover</a></mark> <mark style="background: #000000; color: 878787"><a class="internal-link" href="Sample Team OKRs#^d141c9">🔗🎯</a></mark>
+		- [ ] <mark style="background: #CACFD9A6;">🏆 Lead Scoring System</mark>
+			- [ ] <mark style="background: linear-gradient(to right, #00B7FF, #A890FE);">📝 Define scoring criteria:</mark> **As a** marketing analyst, **I want to** define scoring criteria, **so that** leads can be effectively prioritized.
+				- [ ] Define scoring criteria
+			- [ ] <mark style="background: linear-gradient(to right, #00B7FF, #A890FE);">📝 Implement scoring algorithm:</mark> **As a** data scientist, **I want to** implement a scoring algorithm, **so that** leads are accurately scored.
+				- [ ] Implement scoring algorithm <mark class="active-john-doe" style="background: #BBFABBA6;"><a href="John Doe" class="internal-link">👋 John Doe</a></mark>
+		- [ ] <mark style="background: #CACFD9A6;">🏆 Automated Campaigns</mark> <mark class="active-joe-bloggs" style="background: #BBFABBA6;"><a href="Joe Bloggs" class="internal-link">👋 Joe Bloggs</a></mark>
+			- [ ] <mark style="background: linear-gradient(to right, #00B7FF, #A890FE);">📝 Setup campaign triggers:</mark> **As a** marketing automation specialist, **I want to** setup campaign triggers, **so that** campaigns are automatically launched.
+				- [ ] Setup campaign triggers
+			- [ ] <mark style="background: linear-gradient(to right, #00B7FF, #A890FE);">📝 Test campaign workflows:</mark> **As a** QA engineer, **I want to** test campaign workflows, **so that** campaigns run smoothly.
+				- [ ] Test campaign workflows
+- 🛠️ **Later**
+	- [ ] <mark style="background: #CACFD9A6;">🎖️ International Expansion</mark> <mark class="active-john-doe" style="background: #BBFABBA6;"><a href="John Doe" class="internal-link">👋 John Doe</a></mark> 
+		- [ ] <mark style="background: #CACFD9A6;">🏆 Localization of App</mark> 
+			- [ ] <mark style="background: linear-gradient(to right, #00B7FF, #A890FE);">📝 Translate UI strings:</mark> **As a** localization specialist, **I want to** translate all UI elements, **so that** users in different regions can use the app in their native language.
+				- [ ] Identify key strings for translation
+				- [ ] Work with translators <mark class="active-minty-rover" style="background: #BBFABBA6;"><a href="Minty Rover" class="internal-link">👋 Minty Rover</a></mark>
+		- [ ] <mark style="background: #CACFD9A6;">🏆 Regional Marketing Strategy</mark> <mark class="active-minty-rover" style="background: #BBFABBA6;"><a href="Minty Rover" class="internal-link">👋 Minty Rover</a></mark>
+			- [ ] <mark style="background: linear-gradient(to right, #00B7FF, #A890FE);">📝 Research market trends:</mark> **As a** market analyst, **I want to** research regional trends, **so that** marketing strategies are tailored effectively.
+				- [ ] Analyze competitor strategies
+				- [ ] Develop targeted campaigns <mark class="active-joe-bloggs" style="background: #BBFABBA6;"><a href="Joe Bloggs" class="internal-link">👋 Joe Bloggs</a></mark>
+	- [ ] <mark style="background: #CACFD9A6;">🎖️ Advanced AI Features</mark> <mark class="active-joe-bloggs" style="background: #BBFABBA6;"><a href="Joe Bloggs" class="internal-link">👋 Joe Bloggs</a></mark> 
+		- [ ] <mark style="background: #CACFD9A6;">🏆 Predictive Analytics Integration</mark> 
+			- [ ] <mark style="background: linear-gradient(to right, #00B7FF, #A890FE);">📝 Train ML models:</mark> **As a** data scientist, **I want to** train predictive models, **so that** users receive personalized recommendations.
+				- [ ] Collect training data
+			- [ ] <mark style="background: linear-gradient(to right, #00B7FF, #A890FE);">📝 Deploy models to production:</mark> **As a** DevOps engineer, **I want to** deploy ML models, **so that** they are scalable and reliable.
+				- [ ] Set up monitoring
+				- [ ] Test model accuracy
+		- [ ] <mark style="background: #CACFD9A6;">🏆 Voice Assistant Support</mark> <mark class="active-minty-rover" style="background: #BBFABBA6;"><a href="Minty Rover" class="internal-link">👋 Minty Rover</a></mark>
+			- [ ] <mark style="background: linear-gradient(to right, #00B7FF, #A890FE);">📝 Integrate speech recognition:</mark> **As a** AI developer, **I want to** integrate voice APIs, **so that** users can interact via voice commands.
+				- [ ] Select voice API provider
+			- [ ] <mark style="background: linear-gradient(to right, #00B7FF, #A890FE);">📝 Design voice UI flows:</mark> **As a** UX designer, **I want to** create intuitive voice interactions, **so that** the experience is seamless.
+				- [ ] Prototype voice commands <mark class="active-john-doe" style="background: #BBFABBA6;"><a href="John Doe" class="internal-link">👋 John Doe</a></mark>
+	- [ ] <mark style="background: #CACFD9A6;">🎖️ Sustainability Initiatives</mark> <mark class="active-minty-rover" style="background: #BBFABBA6;"><a href="Minty Rover" class="internal-link">👋 Minty Rover</a></mark>
+		- [ ] <mark style="background: #CACFD9A6;">🏆 Green Data Centers</mark>
+			- [ ] <mark style="background: linear-gradient(to right, #00B7FF, #A890FE);">📝 Audit energy usage:</mark> **As a** sustainability officer, **I want to** assess current energy consumption, **so that** we can reduce our carbon footprint. <mark class="active-joe-bloggs" style="background: #BBFABBA6;"><strong><a href="Joe Bloggs" class="internal-link">👋 Joe Bloggs</a></strong></mark>
+				- [ ] Gather usage metrics <mark class="active-minty-rover" style="background: #BBFABBA6;"><a href="Minty Rover" class="internal-link">👋 Minty Rover</a></mark> 
+			- [ ] <mark style="background: linear-gradient(to right, #00B7FF, #A890FE);">📝 Switch to renewable energy:</mark> **As a** operations manager, **I want to** migrate to green energy sources, **so that** operations are eco-friendly.
+				- [ ] Partner with providers <mark class="active-joe-bloggs" style="background: #BBFABBA6;"><a href="Joe Bloggs" class="internal-link">👋 Joe Bloggs</a></mark>
+		- [ ] <mark style="background: #CACFD9A6;">🏆 Eco-Friendly Packaging</mark> <mark class="active-john-doe" style="background: #BBFABBA6;"><a href="John Doe" class="internal-link">👋 John Doe</a></mark>
+			- [ ] <mark style="background: linear-gradient(to right, #00B7FF, #A890FE);">📝 Research sustainable materials:</mark> **As a** supply chain specialist, **I want to** evaluate eco-materials, **so that** packaging is environmentally responsible.
+				- [ ] Source suppliers
+			- [ ] <mark style="background: linear-gradient(to right, #00B7FF, #A890FE);">📝 Update packaging designs:</mark> **As a** designer, **I want to** redesign packaging, **so that** it aligns with sustainability goals.
+				- [ ] Test new prototypes <mark class="active-minty-rover" style="background: #BBFABBA6;"><a href="Minty Rover" class="internal-link">👋 Minty Rover</a></mark>
+	- [ ] <mark style="background: #CACFD9A6;">🎖️ User Feedback System</mark> <mark class="active-john-doe" style="background: #BBFABBA6;"><a href="John Doe" class="internal-link">👋 John Doe</a></mark> 
+		- [ ] <mark style="background: #CACFD9A6;">🏆 Feedback Collection Tools</mark> 
+			- [ ] <mark style="background: linear-gradient(to right, #00B7FF, #A890FE);">📝 Integrate survey widgets:</mark> **As a** product manager, **I want to** add in-app surveys, **so that** users can provide feedback easily.
+				- [ ] Choose survey platform 
+			- [ ] <mark style="background: linear-gradient(to right, #00B7FF, #A890FE);">📝 Analyze feedback data:</mark> **As a** data analyst, **I want to** process user input, **so that** insights drive improvements.
+				- [ ] Set up analytics dashboard <mark class="active-minty-rover" style="background: #BBFABBA6;"><a href="Minty Rover" class="internal-link">👋 Minty Rover</a></mark>
+		- [ ] <mark style="background: #CACFD9A6;">🏆 Feature Request Portal</mark> <mark class="active-minty-rover" style="background: #BBFABBA6;"><a href="Minty Rover" class="internal-link">👋 Minty Rover</a></mark>
+			- [ ] <mark style="background: linear-gradient(to right, #00B7FF, #A890FE);">📝 Build request submission form:</mark> **As a** developer, **I want to** create a portal for features, **so that** users can suggest ideas.
+				- [ ] Design form UI
+			- [ ] <mark style="background: linear-gradient(to right, #00B7FF, #A890FE);">📝 Prioritize requests:</mark> **As a** product owner, **I want to** rank user suggestions, **so that** development focuses on high-impact features.
+				- [ ] Implement voting system <mark class="active-joe-bloggs" style="background: #BBFABBA6;"><a href="Joe Bloggs" class="internal-link">👋 Joe Bloggs</a></mark>
+	- [ ] <mark style="background: #CACFD9A6;">🎖️ Cloud Migration Project</mark> <mark class="active-joe-bloggs" style="background: #BBFABBA6;"><a href="Joe Bloggs" class="internal-link">👋 Joe Bloggs</a></mark> 
+		- [ ] <mark style="background: #CACFD9A6;">🏆 Assess Current Infrastructure</mark> 
+			- [ ] <mark style="background: linear-gradient(to right, #00B7FF, #A890FE);">📝 Inventory servers and apps:</mark> **As a** IT architect, **I want to** catalog existing systems, **so that** migration planning is accurate.
+				- [ ] Document dependencies
+			- [ ] <mark style="background: linear-gradient(to right, #00B7FF, #A890FE);">📝 Evaluate cloud providers:</mark> **As a** cloud specialist, **I want to** compare options, **so that** the best fit is selected.
+				- [ ] Run cost-benefit analysis <mark class="active-john-doe" style="background: #BBFABBA6;"><a href="John Doe" class="internal-link">👋 John Doe</a></mark>
+		- [ ] <mark style="background: #CACFD9A6;">🏆 Execute Migration</mark> <mark class="active-minty-rover" style="background: #BBFABBA6;"><a href="Minty Rover" class="internal-link">👋 Minty Rover</a></mark>
+			- [ ] <mark style="background: linear-gradient(to right, #00B7FF, #A890FE);">📝 Migrate databases:</mark> **As a** database engineer, **I want to** transfer data securely, **so that** no information is lost.
+				- [ ] Backup all data
+			- [ ] <mark style="background: linear-gradient(to right, #00B7FF, #A890FE);">📝 Test cloud environment:</mark> **As a** QA team, **I want to** verify functionality, **so that** the migration is successful.
+				- [ ] Perform load testing <mark class="active-joe-bloggs" style="background: #BBFABBA6;"><a href="Joe Bloggs" class="internal-link">👋 Joe Bloggs</a></mark>
+	- [ ] <mark style="background: #CACFD9A6;">🎖️ Employee Training Program</mark> <mark class="active-minty-rover" style="background: #BBFABBA6;"><a href="Minty Rover" class="internal-link">👋 Minty Rover</a></mark> 
+		- [ ] <mark style="background: #CACFD9A6;">🏆 Develop Training Modules</mark>
+			- [ ] <mark style="background: linear-gradient(to right, #00B7FF, #A890FE);">📝 Create e-learning content:</mark> **As a** training coordinator, **I want to** build online courses, **so that** employees can learn at their own pace.
+				- [ ] Outline course topics
+			- [ ] <mark style="background: linear-gradient(to right, #00B7FF, #A890FE);">📝 Record video tutorials:</mark> **As a** content creator, **I want to** produce engaging videos, **so that** training is interactive.
+				- [ ] Edit and upload videos <mark class="active-john-doe" style="background: #BBFABBA6;"><a href="John Doe" class="internal-link">👋 John Doe</a></mark>
+		- [ ] <mark style="background: #CACFD9A6;">🏆 Rollout and Evaluation</mark> <mark class="active-joe-bloggs" style="background: #BBFABBA6;"><a href="Joe Bloggs" class="internal-link">👋 Joe Bloggs</a></mark>
+			- [ ] <mark style="background: linear-gradient(to right, #00B7FF, #A890FE);">📝 Schedule training sessions:</mark> **As a** HR manager, **I want to** organize workshops, **so that** teams are upskilled efficiently.
+				- [ ] Send invitations
+			- [ ] <mark style="background: linear-gradient(to right, #00B7FF, #A890FE);">📝 Gather feedback:</mark> **As a** evaluator, **I want to** collect post-training surveys, **so that** the program can be improved.
+				- [ ] Analyze results

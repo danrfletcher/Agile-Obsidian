@@ -1,0 +1,10 @@
+{
+	"id": "session-notes",
+	"name": "Session Notes",
+	"version": "1.2.0",
+	"minAppVersion": "0.15.0",
+	"description": "Create temporary one-off session notes",
+	"author": "tabibyte",
+	"authorUrl": "https://github.com/tabibyte",
+	"isDesktopOnly": false
+}

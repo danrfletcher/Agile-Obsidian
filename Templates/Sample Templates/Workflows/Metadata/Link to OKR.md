@@ -1,0 +1,1 @@
+<mark style="background: #000000; color: 878787"><strong><a class="internal-link" href="OKR-block-link-with-no-square-brackets">🔗🎯</a></strong></mark>

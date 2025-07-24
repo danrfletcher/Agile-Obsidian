@@ -1,0 +1,1 @@
+<mark style="background: #4169E1;"><strong>Payment Plan - [Number] Months - [End Date YYYY-MM-DD]</strong></mark>

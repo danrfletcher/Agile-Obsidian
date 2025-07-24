@@ -1,0 +1,42 @@
+{
+  "promptDelete": false,
+  "alwaysUpdateLinks": true,
+  "pdfExportSettings": {
+    "includeName": true,
+    "pageSize": "A4",
+    "landscape": false,
+    "margin": "0",
+    "downscalePercent": 70
+  },
+  "readableLineLength": true,
+  "mobilePullAction": "command-palette:open",
+  "mobileToolbarCommands": [
+    "editor:toggle-checklist-status",
+    "editor:indent-list",
+    "editor:unindent-list",
+    "editor:swap-line-up",
+    "editor:swap-line-down",
+    "editor:undo",
+    "editor:redo",
+    "editor:toggle-bold",
+    "editor:toggle-italics",
+    "editor:toggle-strikethrough",
+    "editor:attach-file",
+    "editor:configure-toolbar",
+    "highlightr-plugin:Pink",
+    "highlightr-plugin:Red",
+    "highlightr-plugin:Orange",
+    "highlightr-plugin:Yellow",
+    "highlightr-plugin:Green",
+    "highlightr-plugin:Cyan",
+    "highlightr-plugin:Blue",
+    "highlightr-plugin:Purple",
+    "highlightr-plugin:Grey"
+  ],
+  "userIgnoreFilters": [
+    "Archive/"
+  ],
+  "newFileLocation": "folder",
+  "newFileFolderPath": "Adhoc",
+  "showUnsupportedFiles": true
+}

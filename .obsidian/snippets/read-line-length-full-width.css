@@ -1,0 +1,16 @@
+/* 
+Can be added to make individual notes full width in both edit &/or preview mode.
+Use 'cssclasses: full-width' in YAML frontmatter.
+*/
+
+/* For Preview View */
+.full-width-preview.markdown-preview-view.is-readable-line-width .markdown-preview-section,
+.full-width-preview.markdown-preview-view.is-readable-line-width .markdown-preview-section > div {
+   width: 100% !important;
+   max-width: 100% !important;
+}
+
+/* For Editing View */
+.full-width-edit {
+    --file-line-width: 100%;
+}
